@@ -5,11 +5,11 @@ use Illuminate\Support\Str;
 use App\DataTransferObjects\PokemonFindedDTO;
 use App\DataTransferObjects\PokemonSearchDTO;
 
-class SearchPokemonAction extends IndexPokemonAction
+class SearchPokemonAction extends PokemonAction
 {
     public function searchPokemon(PokemonSearchDTO $pokemonSearchDTO):PokemonFindedDTO
     {
-        $pokemonData = $this->getPokemonData();
+        $pokemonData = $this->connectToApi();
         $pokemonsfinded=[];
         $pokemonExist=false;
         foreach ($pokemonData->results as $key => $pokemon) {
