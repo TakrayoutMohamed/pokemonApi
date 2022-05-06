@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\DataTransferObjects\PokemonSearchDTO;
 use Illuminate\Foundation\Http\FormRequest;
 
 class SearchPokemonRequest extends FormRequest
@@ -26,5 +27,12 @@ class SearchPokemonRequest extends FormRequest
         return [
             'search' =>'string|required'
         ];
+    }
+
+    public function toPokemonSearchDTO() :PokemonSearchDTO
+    {
+        return new PokemonSearchDTO(
+            search : $this->search
+        );
     }
 }

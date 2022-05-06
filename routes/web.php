@@ -14,12 +14,10 @@ use App\Http\Controllers\PokemonController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/','layout.app')->name('/');
 
 Route::prefix('pokemon')->group(function () {
-    Route::get('index',[PokemonController::class,'index']);
-    Route::get('detail/{pokemonName}',[PokemonController::class,'detail']);
-    Route::get('search',[PokemonController::class,'search']);
+    Route::get('index',[PokemonController::class,'index'])->name("index");
+    Route::get('detail/{pokemonName}',[PokemonController::class,'detail'])->name("detail");
+    Route::get('search',[PokemonController::class,'search'])->name("search");
 });

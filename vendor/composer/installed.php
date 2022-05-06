@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v9.1.5',
-        'version' => '9.1.5.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '8e770628ea2dce638ab38bd7accaabb3db7cc09e',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -374,12 +374,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v9.1.5',
-            'version' => '9.1.5.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '8e770628ea2dce638ab38bd7accaabb3db7cc09e',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -736,8 +736,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -949,6 +949,15 @@
             'aliases' => array(),
             'reference' => '4ee7d41aa5268107906ea8a4d9ceccde136dbd5b',
             'dev_requirement' => true,
+        ),
+        'spatie/data-transfer-object' => array(
+            'pretty_version' => '3.7.3',
+            'version' => '3.7.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../spatie/data-transfer-object',
+            'aliases' => array(),
+            'reference' => '341f72c77e0fce40ea2e0dcb212cb54dc27bbe72',
+            'dev_requirement' => false,
         ),
         'spatie/flare-client-php' => array(
             'pretty_version' => '1.1.0',

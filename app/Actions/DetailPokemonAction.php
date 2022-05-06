@@ -1,25 +1,19 @@
 <?php
 namespace App\Actions;
 
+use App\DataTransferObjects\PokemonDetailDTO;
 
 class DetailPokemonAction extends PokemonAction
 {
-    
-
-    public function getPokemonDetail(string $pokemonName):array
+    public function getPokemonDetail(string $pokemonName):PokemonDetailDTO
     {
-        $data = $this->client->get('https://pokeapi.co/api/v2/pokemon/'.$pokemonName);
-        $detaildata=json_decode((string) $data->getBody());
-
-
-        
-        return [
-            'abilities'=>$detaildata->abilities,
-            'height'=>$detaildata->height,
-            'weight'=>$detaildata->weight,
-            'base_experience'=>$detaildata->base_experience,
-            'stats'=>$detaildata->stats,
-            'moves'=>$detaildata->moves,
-        ];
+        return new PokemonDetailDTO(
+            height :$this->connectToApi($pokemonName)->height,
+            weight :$this->connectToApi($pokemonName)->weight,
+            abilities :$this->connectToApi($pokemonName)->abilities,
+            base_experience :$this->connectToApi($pokemonName)->base_experience,
+            stats  :$this->connectToApi($pokemonName)->stats,
+            moves  : $this->connectToApi($pokemonName)->moves,
+        );
     }
 }

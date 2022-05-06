@@ -2,24 +2,26 @@
 
 @section('content')
     <div class="px-4">
-        <div class="row px-3">
-            <div class="col-4 ">
-                <fieldset>
-                    <legend> height  </legend>
-                    {{ $detailPokemon['height'] }}
-                </fieldset>
-            </div>
-            <div class="col-4 ">
-                <fieldset>
-                    <legend> weight  </legend>
-                    {{ $detailPokemon['weight'] }}
-                </fieldset>
-            </div>
-            <div class="col-4 ">
-                <fieldset>
-                    <legend> base_experience  </legend>
-                    {{ $detailPokemon['base_experience'] }}
-                </fieldset>
+        <div class="px-0 " >
+            <div class="col-12 row p-0 m-0 bg-dark" style="color:white; border-radius:6px 6px 0px 0px;">
+                <div class="col-4 p-0 m-0">
+                    <fieldset>
+                        <legend> height  </legend>
+                        {{ $detailPokemon->height }}
+                    </fieldset>
+                </div>
+                <div class="col-4 p-0 m-0">
+                    <fieldset>
+                        <legend> weight  </legend>
+                        {{ $detailPokemon->weight }}
+                    </fieldset>
+                </div>
+                <div class="col-4 p-0 m-0">
+                    <fieldset>
+                        <legend> base_experience  </legend>
+                        {{ $detailPokemon->base_experience }}
+                    </fieldset>
+                </div>
             </div>
         </div>
         <div class="row p-0 m-0">
@@ -33,7 +35,7 @@
                                     <h4 class="my-0 font-weight-normal">abilities</h4>
                                 </div>
                                 <div class="card-body">
-                                    @foreach ($detailPokemon['abilities'] as $ability)
+                                    @foreach ($detailPokemon->abilities as $ability)
                                         <fieldset class="" style="">
                                             <legend class="" style="border: 2px black solid">{{ $ability->ability->name }}</legend>
                                             <ul class="list-group">
@@ -68,7 +70,7 @@
                                     <h4 class="my-0 font-weight-normal">Stats</h4>
                                 </div>
                                 <div class="card-body row">
-                                    @foreach ($detailPokemon['stats'] as $stat)
+                                    @foreach ($detailPokemon->stats as $stat)
                                         <fieldset class="col-6 pb-2 " style="">
                                             <legend class="mt-1 m-0" style="border: 2px black solid">{{ $stat->stat->name }}</legend>
                                             <ul class="list-group">
@@ -104,8 +106,8 @@
                                 <h4 class="my-0 font-weight-normal">Moves</h4>
                             </div>
                             <div class="card-body row">
-                                @foreach ($detailPokemon['moves'] as $move)
-                                    <a href="{{ $move->move->url }}" class="col-3 px-1 " style="">
+                                @foreach ($detailPokemon->moves as $move)
+                                    <a href="#" class="col-3 px-1 " style="">
                                         <legend class="mt-1 m-0" style="border: 2px black solid">{{ $move->move->name }}</legend>
                                     </a>
                                 @endforeach

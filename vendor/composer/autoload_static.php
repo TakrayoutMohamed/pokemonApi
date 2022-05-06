@@ -83,6 +83,7 @@ class ComposerStaticInit0619f8b1c1d2a38d66f644ae857f2f20
             'Spatie\\LaravelIgnition\\' => 23,
             'Spatie\\Ignition\\' => 16,
             'Spatie\\FlareClient\\' => 19,
+            'Spatie\\DataTransferObject\\' => 26,
             'Spatie\\Backtrace\\' => 17,
         ),
         'R' => 
@@ -178,8 +179,8 @@ class ComposerStaticInit0619f8b1c1d2a38d66f644ae857f2f20
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'Whoops\\' => 
         array (
@@ -309,6 +310,10 @@ class ComposerStaticInit0619f8b1c1d2a38d66f644ae857f2f20
         array (
             0 => __DIR__ . '/..' . '/spatie/flare-client-php/src',
         ),
+        'Spatie\\DataTransferObject\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/data-transfer-object/src',
+        ),
         'Spatie\\Backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/backtrace/src',
@@ -335,8 +340,8 @@ class ComposerStaticInit0619f8b1c1d2a38d66f644ae857f2f20
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -505,9 +510,14 @@ class ComposerStaticInit0619f8b1c1d2a38d66f644ae857f2f20
     );
 
     public static $classMap = array (
+        'App\\Actions\\DetailPokemonAction' => __DIR__ . '/../..' . '/app/Actions/DetailPokemonAction.php',
+        'App\\Actions\\IndexPokemonAction' => __DIR__ . '/../..' . '/app/Actions/IndexPokemonAction.php',
+        'App\\Actions\\PokemonAction' => __DIR__ . '/../..' . '/app/Actions/PokemonAction.php',
+        'App\\Actions\\SearchPokemonAction' => __DIR__ . '/../..' . '/app/Actions/SearchPokemonAction.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\PokemonController' => __DIR__ . '/../..' . '/app/Http/Controllers/PokemonController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
@@ -517,6 +527,7 @@ class ComposerStaticInit0619f8b1c1d2a38d66f644ae857f2f20
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\SearchPokemonRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SearchPokemonRequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -4507,6 +4518,23 @@ class ComposerStaticInit0619f8b1c1d2a38d66f644ae857f2f20
         'Spatie\\Backtrace\\CodeSnippet' => __DIR__ . '/..' . '/spatie/backtrace/src/CodeSnippet.php',
         'Spatie\\Backtrace\\File' => __DIR__ . '/..' . '/spatie/backtrace/src/File.php',
         'Spatie\\Backtrace\\Frame' => __DIR__ . '/..' . '/spatie/backtrace/src/Frame.php',
+        'Spatie\\DataTransferObject\\Arr' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Arr.php',
+        'Spatie\\DataTransferObject\\Attributes\\CastWith' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Attributes/CastWith.php',
+        'Spatie\\DataTransferObject\\Attributes\\DefaultCast' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Attributes/DefaultCast.php',
+        'Spatie\\DataTransferObject\\Attributes\\MapFrom' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Attributes/MapFrom.php',
+        'Spatie\\DataTransferObject\\Attributes\\MapTo' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Attributes/MapTo.php',
+        'Spatie\\DataTransferObject\\Attributes\\Strict' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Attributes/Strict.php',
+        'Spatie\\DataTransferObject\\Caster' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Caster.php',
+        'Spatie\\DataTransferObject\\Casters\\ArrayCaster' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Casters/ArrayCaster.php',
+        'Spatie\\DataTransferObject\\Casters\\DataTransferObjectCaster' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Casters/DataTransferObjectCaster.php',
+        'Spatie\\DataTransferObject\\DataTransferObject' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/DataTransferObject.php',
+        'Spatie\\DataTransferObject\\Exceptions\\InvalidCasterClass' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Exceptions/InvalidCasterClass.php',
+        'Spatie\\DataTransferObject\\Exceptions\\UnknownProperties' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Exceptions/UnknownProperties.php',
+        'Spatie\\DataTransferObject\\Exceptions\\ValidationException' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Exceptions/ValidationException.php',
+        'Spatie\\DataTransferObject\\Reflection\\DataTransferObjectClass' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Reflection/DataTransferObjectClass.php',
+        'Spatie\\DataTransferObject\\Reflection\\DataTransferObjectProperty' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Reflection/DataTransferObjectProperty.php',
+        'Spatie\\DataTransferObject\\Validation\\ValidationResult' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Validation/ValidationResult.php',
+        'Spatie\\DataTransferObject\\Validator' => __DIR__ . '/..' . '/spatie/data-transfer-object/src/Validator.php',
         'Spatie\\FlareClient\\Api' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Api.php',
         'Spatie\\FlareClient\\Concerns\\HasContext' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Concerns/HasContext.php',
         'Spatie\\FlareClient\\Concerns\\UsesTime' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Concerns/UsesTime.php',
