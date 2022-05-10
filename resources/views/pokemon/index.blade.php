@@ -11,7 +11,7 @@
                                 <h4 class="my-0 font-weight-normal">{{ $pokemon->name }}</h4>
                             </div>
                             <div class="card-body">
-                                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/{{ $pokemonId+1 }}.png" alt="here the picture of pokemon">
+                                <img src="{{ asset('./storage/Pokemons/Images/'.$pokemon->name.'.png') }}" alt="here the picture of pokemon">
                             </div>
                         </div>
                     </a>
